@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Best Friend's Party!</title>
+  <style>
+    body {
+      background: #f0e8ff;
+      font-family: 'Arial', sans-serif;
+      text-align: center;
+      padding: 50px;
+    }
+    h1 {
+      color: #8a2be2;
+    }
+    .happy-button {
+      background: #00c3ff;
+      color: white;
+      padding: 15px 30px;
+      border: none;
+      border-radius: 5px;
+      font-size: 18px;
+      cursor: pointer;
+      margin: 20px;
+    }
+    #secret-content {
+      display: none;
+      margin-top: 30px;
+      background: #e0ffe0;
+      padding: 20px;
+      border-radius: 10px;
+    }
+    input {
+      padding: 10px;
+      margin-top: 10px;
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🎈 Welcome to My Best Friend's Party! 🎉</h1>
+  <p>Let's celebrate joy, friendship, and fun!</p>
+
+  <button class="happy-button" onclick="beHappy()">Be Happy Now 😊</button>
+
+  <div id="happy-message"></div>
+
+  <h2>🔒 Enter Password to Unlock Secret Party Details</h2>
+  <input type="password" id="passwordInput" placeholder="Enter password">
+  <button onclick="checkPassword()">Unlock</button>
+
+  <div id="secret-content">
+    <h3>🎊 Secret Party Details</h3>
+    <p>Date: June 30, 2025</p>
+    <p>Location: My backyard paradise 🌴</p>
+    <p>Dress Code: Bright colors + your biggest smile 😄</p>
+  </div>
+
+  <script>
+    function beHappy() {
+      document.getElementById("happy-message").innerHTML = "🌞 You are amazing! Smile and dance a little!";
+    }
+
+    function checkPassword() {
+      const password = document.getElementById("passwordInput").value;
+      if (password === "bestie2025") {
+        document.getElementById("secret-content").style.display = "block";
+      } else {
+        alert("Oops! That's not the right password.");
+      }
+    }
+  </script>
+
+</body>
+</html>
